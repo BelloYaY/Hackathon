@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --background: 218 43% 7%;
+  --foreground: 210 38% 96%;
+  --card: 220 33% 11%;
+  --card-foreground: 210 40% 98%;
+  --muted: 220 24% 17%;
+  --muted-foreground: 215 20% 73%;
+  --border: 218 23% 24%;
+  --primary: 184 86% 43%;
+  --primary-foreground: 216 40% 10%;
+  --success: 142 70% 48%;
+  --warning: 42 95% 54%;
+  --danger: 3 88% 61%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(1100px 500px at 100% -20%, rgba(0, 215, 210, 0.14), transparent 60%),
+    radial-gradient(1000px 500px at -10% 100%, rgba(15, 153, 255, 0.12), transparent 65%),
+    hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'IBM Plex Sans', ui-sans-serif, system-ui;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.glass {
+  background: linear-gradient(180deg, rgba(20, 29, 44, 0.9), rgba(13, 19, 30, 0.88));
+  border: 1px solid rgba(89, 113, 143, 0.28);
+  backdrop-filter: blur(8px);
+}
+
+.panel-header {
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: hsl(var(--muted-foreground));
+}
